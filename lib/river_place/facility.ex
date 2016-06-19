@@ -1,4 +1,6 @@
-defmodule Facility do
+defmodule RiverPlace.Facility do
+  alias RiverPlace.Facility
+
   defstruct [:id, :name, :time_slots]
 
   def new(data, name) do

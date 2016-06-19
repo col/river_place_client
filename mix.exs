@@ -1,4 +1,4 @@
-defmodule CourtBooking.Mixfile do
+defmodule RiverPlace.Mixfile do
   use Mix.Project
 
   def project do

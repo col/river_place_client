@@ -1,8 +1,6 @@
-# CourtBooking
+# River Place Facility Booking API
 
 **TODO: Add description**
-
-
 
 ## Installation
 

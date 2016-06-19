@@ -1,4 +1,6 @@
-defmodule TimeSlot do
+defmodule RiverPlace.TimeSlot do
+  alias RiverPlace.TimeSlot
+
   defstruct [:id, :start_time, :end_time, :booking_id]
 
   def new(data) do
