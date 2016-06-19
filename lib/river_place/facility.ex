@@ -9,7 +9,7 @@ defmodule RiverPlace.Facility do
     %Facility{
       id: Map.get(data, "id"),
       name: name,
-      time_slots: Enum.map(bookingData, &TimeSlot.new/1)
+      time_slots: Enum.map(bookingData, fn(d) -> TimeSlot.new(d, name) end)
     }
   end
 

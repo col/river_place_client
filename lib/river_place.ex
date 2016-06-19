@@ -31,17 +31,17 @@ defmodule RiverPlace do
     end
   end
 
-  def court_info(date) do
+  def time_slots(date) do
     {year, month, day} = slit_date(date)
-    court_info(year, month, day)
+    time_slots(year, month, day)
   end
 
-  def court_info(year, month, day) do
+  defp time_slots(year, month, day) do
     response = RiverPlace.get!("/cms-facility-booking/status/#{year}-#{month}-#{day}/")
     entity = Map.get(response.body, "entity")
     court1 = Facility.new(Map.get(entity, "t1"), "Court 1")
     court2 = Facility.new(Map.get(entity, "t2"), "Court 2")
-    [court1, court2]
+    Enum.concat(court1.time_slots, court2.time_slots)
   end
 
   def create_booking(date, time_slot) do
@@ -49,7 +49,7 @@ defmodule RiverPlace do
     create_booking(year, month, day, time_slot)
   end
 
-  def create_booking(year, month, day, time_slot) do
+  defp create_booking(year, month, day, time_slot) do
     response = RiverPlace.post!(
       "/cms-facility-booking/booking/",
       "time[]=#{year}-#{month}-#{day}&sid[]=#{time_slot.id}"
