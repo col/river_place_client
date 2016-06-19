@@ -1,4 +1,4 @@
-defmodule CourtBookingTest do
+defmodule RiverPlaceTest do
   use ExUnit.Case
   doctest CourtBooking
 
