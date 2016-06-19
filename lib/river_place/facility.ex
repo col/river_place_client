@@ -1,5 +1,5 @@
 defmodule RiverPlace.Facility do
-  alias RiverPlace.Facility
+  alias RiverPlace.{Facility, TimeSlot}
 
   defstruct [:id, :name, :time_slots]
 

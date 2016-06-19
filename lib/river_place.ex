@@ -1,5 +1,6 @@
 defmodule RiverPlace do
   use HTTPoison.Base
+  alias RiverPlace.{Facility, TimeSlot}
 
   def start(:normal, []) do
     Agent.start_link(fn -> "" end, name: :login_cookie)
@@ -30,12 +31,22 @@ defmodule RiverPlace do
     end
   end
 
+  def court_info(date) do
+    {year, month, day} = slit_date(date)
+    court_info(year, month, day)
+  end
+
   def court_info(year, month, day) do
     response = RiverPlace.get!("/cms-facility-booking/status/#{year}-#{month}-#{day}/")
     entity = Map.get(response.body, "entity")
     court1 = Facility.new(Map.get(entity, "t1"), "Court 1")
     court2 = Facility.new(Map.get(entity, "t2"), "Court 2")
     [court1, court2]
+  end
+
+  def create_booking(date, time_slot) do
+    {year, month, day} = slit_date(date)
+    create_booking(year, month, day, time_slot)
   end
 
   def create_booking(year, month, day, time_slot) do
@@ -87,6 +98,11 @@ defmodule RiverPlace do
       {:ok, decoded} -> decoded
       {:error, _} -> body
     end
+  end
+
+  defp slit_date(date) do
+    parts = String.split(date, "-")
+    {Enum.at(parts, 0), Enum.at(parts, 1), Enum.at(parts, 2)}
   end
 
 end
