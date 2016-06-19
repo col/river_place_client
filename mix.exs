@@ -2,7 +2,7 @@ defmodule CourtBooking.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :court_booking,
+    [app: :river_place,
      version: "0.0.1",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,

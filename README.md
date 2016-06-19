@@ -8,14 +8,14 @@
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
-  1. Add court_booking to your list of dependencies in `mix.exs`:
+  1. Add river_place to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:court_booking, "~> 0.0.1"}]
+          [{:river_place, "~> 0.0.1"}]
         end
 
-  2. Ensure court_booking is started before your application:
+  2. Ensure river_place is started before your application:
 
         def application do
-          [applications: [:court_booking]]
+          [applications: [:river_place]]
         end

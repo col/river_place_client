@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :court_booking, key: :value
+#     config :river_place, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:court_booking, :key)
+#     Application.get_env(:river_place, :key)
 #
 # Or configure a 3rd-party app:
 #
