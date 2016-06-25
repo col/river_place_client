@@ -50,12 +50,16 @@ defmodule RiverPlace do
   end
 
   defp create_booking(year, month, day, time_slot) do
+    request_body = "time[]=#{year}-#{month}-#{day}&sid[]=#{time_slot.id}"
     response = RiverPlace.post!(
       "/cms-facility-booking/booking/",
-      "time[]=#{year}-#{month}-#{day}&sid[]=#{time_slot.id}"
+      request_body
     )
     case Map.get(response.body, "state") do
-      "ERROR" -> :error
+      "ERROR" ->
+        IO.puts "Failed to create booking with request body: #{request_body}"
+        IO.puts "Response Body: #{response.body}"
+        :error
       _ -> :ok
     end
   end
