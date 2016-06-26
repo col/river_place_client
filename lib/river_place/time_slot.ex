@@ -1,7 +1,7 @@
 defmodule RiverPlace.TimeSlot do
   alias RiverPlace.TimeSlot
 
-  defstruct [:id, :start_time, :end_time, :booking_id, :facility_name]
+  defstruct [:id, :start_time, :end_time, :booking_id, :facility_name, :status]
 
   def new(data, facility_name) do
     time_slot_data = Map.get(data, "bookingSession")
@@ -10,12 +10,17 @@ defmodule RiverPlace.TimeSlot do
       start_time: Map.get(time_slot_data, "startTime"),
       end_time: Map.get(time_slot_data, "endTime"),
       booking_id: booking_id(data),
-      facility_name: facility_name
+      facility_name: facility_name,
+      status: Map.get(data, "status")
     }
   end
 
+  def available?(time_slot) do
+    time_slot.status == "valid" && time_slot.booking_id == nil
+  end
+
   def available(time_slots) do
-    Enum.filter(time_slots, fn(t) -> t.booking_id == nil end)
+    Enum.filter(time_slots, fn(t) -> TimeSlot.available?(t) end)
   end
 
   def for_time(time_slots, time) do
