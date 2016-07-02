@@ -1,6 +1,6 @@
 defmodule RiverPlace do
   use HTTPoison.Base
-  alias RiverPlace.{Facility, TimeSlot}
+  alias RiverPlace.Facility
 
   def start(:normal, []) do
     Agent.start_link(fn -> "" end, name: :login_cookie)
@@ -26,7 +26,7 @@ defmodule RiverPlace do
     case RiverPlace.get!("/member-annoucement") do
       %{status_code: 200, body: body} ->
         !String.contains?(body, "location.href = \"/member-login\";")
-      response ->
+      _ ->
         false
     end
   end
@@ -50,23 +50,19 @@ defmodule RiverPlace do
   end
 
   defp create_booking(year, month, day, time_slot) do
-    request_body = "time[]=#{year}-#{month}-#{day}&sid[]=#{time_slot.id}"
     response = RiverPlace.post!(
       "/cms-facility-booking/booking/",
-      request_body
+      "time[]=#{year}-#{month}-#{day}&sid[]=#{time_slot.id}"
     )
     case Map.get(response.body, "state") do
-      "ERROR" ->
-        IO.puts "Failed to create booking with request body: #{request_body}"
-        IO.puts "Response Body: #{response.body}"
-        :error
+      "ERROR" -> :error
       _ -> :ok
     end
   end
 
   def delete_booking(booking_id) do
     case RiverPlace.post!("/cms-facility-booking/cancel/#{booking_id}/", "") do
-      %{status_code: 200, body: body} ->
+      %{status_code: 200} ->
         # Note: There doesn't seem to be a way to know if the delete operation
         # was actually successful or not.
         :ok
