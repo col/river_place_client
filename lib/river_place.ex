@@ -31,6 +31,7 @@ defmodule RiverPlace do
     end
   end
 
+  # Date format: "yyyy-mm-dd"
   def time_slots(date) do
     {year, month, day} = slit_date(date)
     time_slots(year, month, day)
@@ -55,8 +56,8 @@ defmodule RiverPlace do
       "time[]=#{year}-#{month}-#{day}&sid[]=#{time_slot.id}"
     )
     case Map.get(response.body, "state") do
-      "ERROR" -> :error
-      _ -> :ok
+      "ERROR" -> {:error, Map.get(response.body, "message")}
+      _ -> {:ok, Map.get(response.body, "entity")}
     end
   end
 
