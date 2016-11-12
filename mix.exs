@@ -3,8 +3,8 @@ defmodule RiverPlace.Mixfile do
 
   def project do
     [app: :river_place,
-     version: "0.0.2",
-     elixir: "~> 1.2",
+     version: "0.0.3",
+     elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -29,7 +29,7 @@ defmodule RiverPlace.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.9.0"},
-     {:poison, "~> 2.0"}]
+    [{:httpoison, "~> 0.10.0"},
+     {:poison, "~> 3.0"}]
   end
 end
