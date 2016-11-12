@@ -1,8 +1,8 @@
-defmodule RiverPlace.Mixfile do
+defmodule RiverPlaceClient.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :river_place,
+    [app: :river_place_client,
      version: "0.0.3",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
@@ -16,7 +16,7 @@ defmodule RiverPlace.Mixfile do
     [
       maintainers: ["Colin Harris"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/col/river_place"}
+      links: %{"GitHub" => "https://github.com/col/river_place_client"}
     ]
   end
 

@@ -1,6 +1,6 @@
-defmodule RiverPlace do
-  alias RiverPlace.{Facility, Booking}
-  @http_client Application.get_env(:river_place, :http_client)
+defmodule RiverPlaceClient do
+  alias RiverPlaceClient.{Facility, Booking}
+  @http_client Application.get_env(:river_place_client, :http_client)
 
   def login(username, password) do
     case @http_client.login(username, password) do

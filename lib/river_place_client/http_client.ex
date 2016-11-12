@@ -1,6 +1,6 @@
-defmodule RiverPlace.HttpClient do
+defmodule RiverPlaceClient.HttpClient do
   use HTTPoison.Base
-  alias RiverPlace.HttpClient
+  alias RiverPlaceClient.HttpClient
 
   def login(username, password) do
     HttpClient.post!("/pub-member/login/", "username=#{username}&password=#{password}")

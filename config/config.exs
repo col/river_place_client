@@ -10,18 +10,18 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :river_place, key: :value
+#     config :river_place_client, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:river_place, :key)
+#     Application.get_env(:river_place_client, :key)
 #
 # Or configure a 3rd-party app:
 #
 #     config :logger, level: :info
 #
 
-config :river_place, http_client: RiverPlace.HttpClient
+config :river_place_client, http_client: RiverPlaceClient.HttpClient
 
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment

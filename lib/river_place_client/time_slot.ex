@@ -1,5 +1,5 @@
-defmodule RiverPlace.TimeSlot do
-  alias RiverPlace.TimeSlot
+defmodule RiverPlaceClient.TimeSlot do
+  alias RiverPlaceClient.TimeSlot
 
   defstruct [:id, :start_time, :end_time, :booking_id, :facility_name, :status]
 

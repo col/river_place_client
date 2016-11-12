@@ -1,4 +1,4 @@
-defmodule RiverPlace.HttpClientMock do
+defmodule RiverPlaceClient.HttpClientMock do
 
   def login(_, "valid") do
     %{

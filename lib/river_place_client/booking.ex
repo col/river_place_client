@@ -1,5 +1,5 @@
-defmodule RiverPlace.Booking do
-  alias RiverPlace.{Booking, Facility}
+defmodule RiverPlaceClient.Booking do
+  alias RiverPlaceClient.{Booking, Facility}
 
   defstruct [:id, :desc, :facility, :day, :start, :end]
 
