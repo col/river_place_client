@@ -29,7 +29,7 @@ defmodule RiverPlaceClient.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.10.0"},
-      {:poison, "~> 3.0"},
+      {:poison, "~> 2.2"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
