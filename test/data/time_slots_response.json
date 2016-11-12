@@ -1,0 +1,538 @@
+{
+  "state": "SUCCESS",
+  "message": null,
+  "entity": {
+    "b2": {
+      "code": "b2",
+      "days": 1,
+      "dailySummaries": [
+        {
+          "facilityBookings": [
+            {
+              "id": null,
+              "present": true,
+              "name": null,
+              "status": "valid",
+              "dT": false,
+              "desc": "12:00 PM  November 12",
+              "day": "2016-11-12 00:00:00",
+              "channel": null,
+              "facility": null,
+              "bookingSession": {
+                "id": 38,
+                "present": true,
+                "name": "BBQ Pit 2   session 1",
+                "sequence": 0,
+                "startTime": "12:00 PM",
+                "beginTime": "1970-01-01 12:00:00",
+                "stopTime": "1970-01-01 17:00:00",
+                "endTime": "05:00 PM",
+                "facility": {
+                  "id": 7,
+                  "present": true,
+                  "name": "BBQ Pit 2",
+                  "description": null,
+                  "code": "b2",
+                  "startTime": null,
+                  "endTime": null,
+                  "facilitySort": {
+                    "id": 1,
+                    "present": true,
+                    "name": "BBQ",
+                    "expirtTime": null,
+                    "bookingLimitations": [
+                      {
+                        "id": 1,
+                        "present": true,
+                        "name": "Advance booking up to 60 days",
+                        "limitType": "ADVANCE",
+                        "value": 60
+                      }
+                    ],
+                    "cancelBefore": null,
+                    "peaks": [],
+                    "timeUnit": null
+                  },
+                  "autoConfirm": false,
+                  "bookingLimitations": []
+                },
+                "fromTo": "12:00 PM --  05:00 PM",
+                "sessionScope": null,
+                "weekendSkip": null
+              },
+              "bookingTime": null,
+              "facilityGroupBooking": null,
+              "bookingStatus": null,
+              "first": false,
+              "peak": false,
+              "relation": null,
+              "serviceBy": null,
+              "bookingBegin": null,
+              "bookingEnd": null,
+              "bookingId": null,
+              "checkInDate": null,
+              "checkinBy": null,
+              "customerName": null,
+              "mainBooking": false,
+              "place": null,
+              "price": null,
+              "purpose": null,
+              "pending": false,
+              "remark": null
+            },
+            {
+              "id": null,
+              "present": true,
+              "name": null,
+              "status": "valid",
+              "dT": false,
+              "desc": "06:00 PM  November 12",
+              "day": "2016-11-12 00:00:00",
+              "channel": null,
+              "facility": null,
+              "bookingSession": {
+                "id": 39,
+                "present": true,
+                "name": "BBQ Pit 2   session 2",
+                "sequence": 1,
+                "startTime": "06:00 PM",
+                "beginTime": "1970-01-01 18:00:00",
+                "stopTime": "1970-01-01 23:00:00",
+                "endTime": "11:00 PM",
+                "facility": {
+                  "id": 7,
+                  "present": true,
+                  "name": "BBQ Pit 2",
+                  "description": null,
+                  "code": "b2",
+                  "startTime": null,
+                  "endTime": null,
+                  "facilitySort": {
+                    "id": 1,
+                    "present": true,
+                    "name": "BBQ",
+                    "expirtTime": null,
+                    "bookingLimitations": [
+                      {
+                        "id": 1,
+                        "present": true,
+                        "name": "Advance booking up to 60 days",
+                        "limitType": "ADVANCE",
+                        "value": 60
+                      }
+                    ],
+                    "cancelBefore": null,
+                    "peaks": [],
+                    "timeUnit": null
+                  },
+                  "autoConfirm": false,
+                  "bookingLimitations": []
+                },
+                "fromTo": "06:00 PM --  11:00 PM",
+                "sessionScope": null,
+                "weekendSkip": null
+              },
+              "bookingTime": null,
+              "facilityGroupBooking": null,
+              "bookingStatus": null,
+              "first": false,
+              "peak": false,
+              "relation": null,
+              "serviceBy": null,
+              "bookingBegin": null,
+              "bookingEnd": null,
+              "bookingId": null,
+              "checkInDate": null,
+              "checkinBy": null,
+              "customerName": null,
+              "mainBooking": false,
+              "place": null,
+              "price": null,
+              "purpose": null,
+              "pending": false,
+              "remark": null
+            }
+          ],
+          "date": "2016-11-12 00:00:00"
+        }
+      ],
+      "id": 7
+    },
+    "t1": {
+      "code": "t1",
+      "days": 1,
+      "dailySummaries": [
+        {
+          "facilityBookings": [
+            {
+              "id": null,
+              "present": true,
+              "name": null,
+              "status": "valid",
+              "dT": false,
+              "desc": "07:00 AM  November 12",
+              "day": "2016-11-12 00:00:00",
+              "channel": null,
+              "facility": null,
+              "bookingSession": {
+                "id": 6,
+                "present": true,
+                "name": "Table Tennis -8 07:00 AM-08:00 AM",
+                "sequence": 0,
+                "startTime": "07:00 AM",
+                "beginTime": "1970-01-01 07:00:00",
+                "stopTime": "1970-01-01 08:00:00",
+                "endTime": "08:00 AM",
+                "facility": {
+                  "id": 4,
+                  "present": true,
+                  "name": "Tennis Court 1",
+                  "description": null,
+                  "code": "t1",
+                  "startTime": null,
+                  "endTime": null,
+                  "facilitySort": {
+                    "id": 4,
+                    "present": true,
+                    "name": "TENNIS",
+                    "expirtTime": 10000000,
+                    "bookingLimitations": [
+                      {
+                        "id": 2,
+                        "present": true,
+                        "name": "Advance booking up to 7 days",
+                        "limitType": "ADVANCE",
+                        "value": 7
+                      },
+                      {
+                        "id": 3,
+                        "present": true,
+                        "name": "4 bookings per week",
+                        "limitType": "PER_WEEK",
+                        "value": 4
+                      }
+                    ],
+                    "cancelBefore": null,
+                    "peaks": [],
+                    "timeUnit": null
+                  },
+                  "autoConfirm": false,
+                  "bookingLimitations": []
+                },
+                "fromTo": "07:00 AM --  08:00 AM",
+                "sessionScope": null,
+                "weekendSkip": null
+              },
+              "bookingTime": null,
+              "facilityGroupBooking": null,
+              "bookingStatus": null,
+              "first": false,
+              "peak": false,
+              "relation": null,
+              "serviceBy": null,
+              "bookingBegin": null,
+              "bookingEnd": null,
+              "bookingId": null,
+              "checkInDate": null,
+              "checkinBy": null,
+              "customerName": null,
+              "mainBooking": false,
+              "place": null,
+              "price": null,
+              "purpose": null,
+              "pending": false,
+              "remark": null
+            },
+            {
+              "id": 10200,
+              "present": true,
+              "name": null,
+              "status": "pending",
+              "dT": false,
+              "desc": "08:00 AM  November 12 By 620602",
+              "day": "2016-11-12 00:00:00",
+              "channel": null,
+              "facility": {
+                "id": 4,
+                "present": true,
+                "name": "Tennis Court 1",
+                "description": null,
+                "code": "t1",
+                "startTime": null,
+                "endTime": null,
+                "facilitySort": {
+                  "id": 4,
+                  "present": true,
+                  "name": "TENNIS",
+                  "expirtTime": 10000000,
+                  "bookingLimitations": [
+                    {
+                      "id": 2,
+                      "present": true,
+                      "name": "Advance booking up to 7 days",
+                      "limitType": "ADVANCE",
+                      "value": 7
+                    },
+                    {
+                      "id": 3,
+                      "present": true,
+                      "name": "4 bookings per week",
+                      "limitType": "PER_WEEK",
+                      "value": 4
+                    }
+                  ],
+                  "cancelBefore": null,
+                  "peaks": [],
+                  "timeUnit": null
+                },
+                "autoConfirm": false,
+                "bookingLimitations": []
+              },
+              "bookingSession": {
+                "id": 7,
+                "present": true,
+                "name": "Table Tennis -9 08:00 AM-09:00 AM",
+                "sequence": 1,
+                "startTime": "08:00 AM",
+                "beginTime": "1970-01-01 08:00:00",
+                "stopTime": "1970-01-01 09:00:00",
+                "endTime": "09:00 AM",
+                "facility": {
+                  "id": 4,
+                  "present": true,
+                  "name": "Tennis Court 1",
+                  "description": null,
+                  "code": "t1",
+                  "startTime": null,
+                  "endTime": null,
+                  "facilitySort": {
+                    "id": 4,
+                    "present": true,
+                    "name": "TENNIS",
+                    "expirtTime": 10000000,
+                    "bookingLimitations": [
+                      {
+                        "id": 2,
+                        "present": true,
+                        "name": "Advance booking up to 7 days",
+                        "limitType": "ADVANCE",
+                        "value": 7
+                      },
+                      {
+                        "id": 3,
+                        "present": true,
+                        "name": "4 bookings per week",
+                        "limitType": "PER_WEEK",
+                        "value": 4
+                      }
+                    ],
+                    "cancelBefore": null,
+                    "peaks": [],
+                    "timeUnit": null
+                  },
+                  "autoConfirm": false,
+                  "bookingLimitations": []
+                },
+                "fromTo": "08:00 AM --  09:00 AM",
+                "sessionScope": null,
+                "weekendSkip": null
+              },
+              "bookingTime": "2016-11-12 15:40:16",
+              "facilityGroupBooking": null,
+              "bookingStatus": "pending",
+              "first": false,
+              "peak": false,
+              "relation": null,
+              "serviceBy": null,
+              "bookingBegin": "2016-11-12 08:00:00",
+              "bookingEnd": "2016-11-12 09:00:00",
+              "bookingId": null,
+              "checkInDate": null,
+              "checkinBy": null,
+              "customerName": null,
+              "mainBooking": false,
+              "place": null,
+              "price": null,
+              "purpose": null,
+              "pending": true,
+              "remark": null
+            }
+          ],
+          "date": "2016-11-12 00:00:00"
+        }
+      ],
+      "id": 4
+    },
+    "t2": {
+      "code": "t2",
+      "days": 1,
+      "dailySummaries": [
+        {
+          "facilityBookings": [
+            {
+              "id": null,
+              "present": true,
+              "name": null,
+              "status": "closed",
+              "dT": false,
+              "desc": "07:00 AM  November 12",
+              "day": "2016-11-12 00:00:00",
+              "channel": null,
+              "facility": null,
+              "bookingSession": {
+                "id": 21,
+                "present": true,
+                "name": "Table Tennis -8 07:00 AM-08:00 AM",
+                "sequence": 0,
+                "startTime": "07:00 AM",
+                "beginTime": "1970-01-01 07:00:00",
+                "stopTime": "1970-01-01 08:00:00",
+                "endTime": "08:00 AM",
+                "facility": {
+                  "id": 5,
+                  "present": true,
+                  "name": "Tennis Court 2",
+                  "description": null,
+                  "code": "t2",
+                  "startTime": null,
+                  "endTime": null,
+                  "facilitySort": {
+                    "id": 4,
+                    "present": true,
+                    "name": "TENNIS",
+                    "expirtTime": 10000000,
+                    "bookingLimitations": [
+                      {
+                        "id": 2,
+                        "present": true,
+                        "name": "Advance booking up to 7 days",
+                        "limitType": "ADVANCE",
+                        "value": 7
+                      },
+                      {
+                        "id": 3,
+                        "present": true,
+                        "name": "4 bookings per week",
+                        "limitType": "PER_WEEK",
+                        "value": 4
+                      }
+                    ],
+                    "cancelBefore": null,
+                    "peaks": [],
+                    "timeUnit": null
+                  },
+                  "autoConfirm": false,
+                  "bookingLimitations": []
+                },
+                "fromTo": "07:00 AM --  08:00 AM",
+                "sessionScope": null,
+                "weekendSkip": null
+              },
+              "bookingTime": null,
+              "facilityGroupBooking": null,
+              "bookingStatus": null,
+              "first": false,
+              "peak": false,
+              "relation": null,
+              "serviceBy": null,
+              "bookingBegin": null,
+              "bookingEnd": null,
+              "bookingId": null,
+              "checkInDate": null,
+              "checkinBy": null,
+              "customerName": null,
+              "mainBooking": false,
+              "place": null,
+              "price": null,
+              "purpose": null,
+              "pending": false,
+              "remark": null
+            },
+            {
+              "id": null,
+              "present": true,
+              "name": null,
+              "status": "closed",
+              "dT": false,
+              "desc": "08:00 AM  November 12",
+              "day": "2016-11-12 00:00:00",
+              "channel": null,
+              "facility": null,
+              "bookingSession": {
+                "id": 22,
+                "present": true,
+                "name": "Table Tennis -9 08:00 AM-09:00 AM",
+                "sequence": 1,
+                "startTime": "08:00 AM",
+                "beginTime": "1970-01-01 08:00:00",
+                "stopTime": "1970-01-01 09:00:00",
+                "endTime": "09:00 AM",
+                "facility": {
+                  "id": 5,
+                  "present": true,
+                  "name": "Tennis Court 2",
+                  "description": null,
+                  "code": "t2",
+                  "startTime": null,
+                  "endTime": null,
+                  "facilitySort": {
+                    "id": 4,
+                    "present": true,
+                    "name": "TENNIS",
+                    "expirtTime": 10000000,
+                    "bookingLimitations": [
+                      {
+                        "id": 2,
+                        "present": true,
+                        "name": "Advance booking up to 7 days",
+                        "limitType": "ADVANCE",
+                        "value": 7
+                      },
+                      {
+                        "id": 3,
+                        "present": true,
+                        "name": "4 bookings per week",
+                        "limitType": "PER_WEEK",
+                        "value": 4
+                      }
+                    ],
+                    "cancelBefore": null,
+                    "peaks": [],
+                    "timeUnit": null
+                  },
+                  "autoConfirm": false,
+                  "bookingLimitations": []
+                },
+                "fromTo": "08:00 AM --  09:00 AM",
+                "sessionScope": null,
+                "weekendSkip": null
+              },
+              "bookingTime": null,
+              "facilityGroupBooking": null,
+              "bookingStatus": null,
+              "first": false,
+              "peak": false,
+              "relation": null,
+              "serviceBy": null,
+              "bookingBegin": null,
+              "bookingEnd": null,
+              "bookingId": null,
+              "checkInDate": null,
+              "checkinBy": null,
+              "customerName": null,
+              "mainBooking": false,
+              "place": null,
+              "price": null,
+              "purpose": null,
+              "pending": false,
+              "remark": null
+            }
+          ],
+          "date": "2016-11-12 00:00:00"
+        }
+      ],
+      "id": 5
+    }
+  },
+  "code": null
+}
