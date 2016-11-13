@@ -41,7 +41,7 @@ defmodule RiverPlaceClientTest do
     assert booking == %Booking{
       id: 10201,
       desc: "07:00 AM  November 12 By 620602",
-      facility: %Facility{id: 4, name: "Tennis Court 1"},
+      facility_name: "Court 1",
       day: "2016-11-12 00:00:00",
       start: "2016-11-12 07:00:00",
       end: "2016-11-12 08:00:00",
