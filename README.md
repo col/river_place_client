@@ -12,6 +12,12 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [{:river_place_client, "~> 0.0.3"}]
         end
 
+  2. Ensure river_place is started before your application:
+
+        def application do
+          [applications: [:river_place]]
+        end
+
 ## Example Usage
 
 ```
