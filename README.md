@@ -66,3 +66,12 @@ ie> RiverPlaceClient.logged_in?(session_id)
 false
 
 ```
+
+## Publish new version
+
+```
+mix hex.build
+
+mix hex.publish
+(enter hex.pm password)
+```
