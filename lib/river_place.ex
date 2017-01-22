@@ -1,5 +1,7 @@
 defmodule RiverPlaceClient do
   alias RiverPlaceClient.{Facility, Booking}
+  require Logger
+
   @http_client Application.get_env(:river_place_client, :http_client)
                 || RiverPlaceClient.HttpClient
 
@@ -8,7 +10,9 @@ defmodule RiverPlaceClient do
       %{body: %{"state" => "SUCCESS"}, headers: headers} ->
         session_id = find_session_id(headers)
         {:ok, session_id}
-      _ ->
+      response ->
+        Logger.warn "[RiverPlaceClient] Login Failed"
+        Logger.warn "Response #{inspect response}"
         :error
     end
   end
