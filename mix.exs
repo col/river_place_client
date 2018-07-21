@@ -3,13 +3,13 @@ defmodule RiverPlaceClient.Mixfile do
 
   def project do
     [app: :river_place_client,
-     version: "0.0.6",
+     version: "0.1.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      description: "Library for booking tennis courts on riverplace.sg",
-     package: package,
-     deps: deps]
+     package: package(),
+     deps: deps()]
   end
 
   def package do

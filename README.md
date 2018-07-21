@@ -9,7 +9,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
   1. Add river_place_client to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:river_place_client, "~> 0.0.3"}]
+          [{:river_place_client, "~> 0.1.0"}]
         end
 
   2. Ensure river_place is started before your application:
@@ -24,7 +24,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 iex -S mix
 
 # Login
-iex> {:ok, session_id} = RiverPlaceClient.login("620602T", "jabba007")
+iex> {:ok, session_id} = RiverPlaceClient.login("600729T", "*****")
 
 # Check Login
 iex> RiverPlaceClient.logged_in?(session_id)
