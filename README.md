@@ -24,14 +24,14 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 iex -S mix
 
 # Login
-iex> {:ok, session_id} = RiverPlaceClient.login("600729T", "*****")
+iex> {:ok, session_id} = RiverPlaceClient.login("*****", "*****")
 
 # Check Login
 iex> RiverPlaceClient.logged_in?(session_id)
 true
 
 # Get all time slots for a day
-iex> RiverPlaceClient.time_slots("2016-11-12")
+iex> RiverPlaceClient.time_slots("2019-05-12")
 [%RiverPlaceClient.TimeSlot{booking_id: nil, end_time: "08:00 AM",
   facility_name: "Court 1", id: 6, start_time: "07:00 AM", status: "valid"},
   %RiverPlaceClient.TimeSlot{booking_id: nil, end_time: "09:00 AM",
@@ -41,12 +41,12 @@ iex> RiverPlaceClient.time_slots("2016-11-12")
 
 # Get available time slots for a specific time
 iex> alias RiverPlaceClient.TimeSlot
-iex> first_available = RiverPlaceClient.time_slots("2016-11-12") |> TimeSlot.available |> TimeSlot.for_time("08:00 AM") |> List.first
+iex> first_available = RiverPlaceClient.time_slots("2019-05-12") |> TimeSlot.available |> TimeSlot.for_time("08:00 AM") |> List.first
 %RiverPlaceClient.TimeSlot{booking_id: nil, end_time: "09:00 AM",
   facility_name: "Court 1", id: 7, start_time: "08:00 AM", status: "valid"}
 
 # Book a court
-iex> {:ok, booking} = RiverPlaceClient.create_booking("2016-11-12", first_available, session_id)
+iex> {:ok, booking} = RiverPlaceClient.create_booking("2019-05-12", first_available, session_id)
 {:ok,
  %RiverPlaceClient.Booking{day: "2016-11-12 00:00:00",
   desc: "08:00 AM  November 11 By 620602", end: "2016-11-12 09:00:00",
