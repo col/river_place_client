@@ -2,17 +2,18 @@ defmodule RiverPlaceClient do
   alias RiverPlaceClient.{Facility, Booking}
   require Logger
 
-  @http_client Application.get_env(:river_place_client, :http_client)
-                || RiverPlaceClient.HttpClient
+  @http_client Application.get_env(:river_place_client, :http_client) ||
+                 RiverPlaceClient.HttpClient
 
   def login(username, password) do
     case @http_client.login(username, password) do
       %{body: %{"state" => "SUCCESS"}, headers: headers} ->
         session_id = find_session_id(headers)
         {:ok, session_id}
+
       response ->
-        Logger.warn "[RiverPlaceClient] Login Failed"
-        Logger.warn "Response #{inspect response}"
+        Logger.warn("[RiverPlaceClient] Login Failed")
+        Logger.warn("Response #{inspect(response)}")
         :error
     end
   end
@@ -26,6 +27,7 @@ defmodule RiverPlaceClient do
     case @http_client.member_annoucement(session_id) do
       %{status_code: 200, body: body} ->
         !String.contains?(body, "location.href = \"/member-login\";")
+
       _ ->
         false
     end
@@ -52,11 +54,13 @@ defmodule RiverPlaceClient do
 
   defp create_booking(year, month, day, time_slot, session_id) do
     response = @http_client.create_booking(year, month, day, time_slot.id, session_id)
+
     case Map.get(response.body, "state") do
       "ERROR" ->
         {:error, Map.get(response.body, "message")}
+
       _ ->
-        {:ok, Map.get(response.body, "entity") |> List.first |> Booking.new}
+        {:ok, Map.get(response.body, "entity") |> List.first() |> Booking.new()}
     end
   end
 
@@ -66,19 +70,20 @@ defmodule RiverPlaceClient do
         # Note: There doesn't seem to be a way to know if the delete operation
         # was actually successful or not.
         :ok
-      _ -> :error
+
+      _ ->
+        :error
     end
   end
 
   defp find_session_id(headers) do
-    Enum.map(headers, &elem(&1,1))
-      |> Enum.filter(&String.starts_with?(&1, "JSESSIONID"))
-      |> List.first
+    Enum.map(headers, &elem(&1, 1))
+    |> Enum.filter(&String.starts_with?(&1, "JSESSIONID"))
+    |> List.first()
   end
 
   defp slit_date(date) do
     parts = String.split(date, "-")
     {Enum.at(parts, 0), Enum.at(parts, 1), Enum.at(parts, 2)}
   end
-
 end

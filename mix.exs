@@ -2,14 +2,16 @@ defmodule RiverPlaceClient.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :river_place_client,
-     version: "0.1.0",
-     elixir: "~> 1.3",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     description: "Library for booking tennis courts on riverplace.sg",
-     package: package(),
-     deps: deps()]
+    [
+      app: :river_place_client,
+      version: "0.1.0",
+      elixir: "~> 1.3",
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: "Library for booking tennis courts on riverplace.sg",
+      package: package(),
+      deps: deps()
+    ]
   end
 
   def package do

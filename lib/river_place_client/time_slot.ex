@@ -5,6 +5,7 @@ defmodule RiverPlaceClient.TimeSlot do
 
   def new(data, facility_name) do
     time_slot_data = Map.get(data, "bookingSession")
+
     %TimeSlot{
       id: Map.get(time_slot_data, "id"),
       start_time: Map.get(time_slot_data, "startTime"),
@@ -20,11 +21,11 @@ defmodule RiverPlaceClient.TimeSlot do
   end
 
   def available(time_slots) do
-    Enum.filter(time_slots, fn(t) -> TimeSlot.available?(t) end)
+    Enum.filter(time_slots, fn t -> TimeSlot.available?(t) end)
   end
 
   def for_time(time_slots, time) do
-    Enum.filter(time_slots, fn(t) -> t.start_time == time end)
+    Enum.filter(time_slots, fn t -> t.start_time == time end)
   end
 
   defp booking_id(data) do
@@ -34,5 +35,4 @@ defmodule RiverPlaceClient.TimeSlot do
       _ -> Map.get(data, "id")
     end
   end
-
 end

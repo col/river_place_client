@@ -30,21 +30,20 @@ defmodule RiverPlaceClient.HttpClient do
     HttpClient.post!("/cms-facility-booking/cancel/#{booking_id}/", "", [{"Cookie", session_id}])
   end
 
-  defp process_url(url) do
+  def process_url(url) do
     "http://www.riverplace.sg" <> url
   end
 
-  defp process_request_headers(headers) do
+  def process_request_headers(headers) do
     Enum.into(headers, [
       {"Content-Type", "application/x-www-form-urlencoded"}
     ])
   end
 
-  defp process_response_body(body) do
-    case body |> Poison.decode do
+  def process_response_body(body) do
+    case body |> Poison.decode() do
       {:ok, decoded} -> decoded
       {:error, _} -> body
     end
   end
-
 end
