@@ -27,7 +27,7 @@ defmodule RiverPlaceClient.HttpClient do
   end
 
   def delete_booking(booking_id, session_id) do
-    HttpClient.post!("/cms-facility-booking/cancel/#{booking_id}/", "", ["Cookie", session_id])
+    HttpClient.post!("/cms-facility-booking/cancel/#{booking_id}/", "", ["Cookie": session_id])
   end
 
   def process_url(url) do
