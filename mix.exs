@@ -32,7 +32,7 @@ defmodule RiverPlaceClient.Mixfile do
     [
       {:httpoison, ">= 1.6.2"},
       {:poison, ">= 2.2.0"},
-      {:ex_doc, ">= 0.0.0", only: :dev}
+      {:ex_doc, ">= 0.21.0", only: :dev}
     ]
   end
 end
