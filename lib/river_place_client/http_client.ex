@@ -7,11 +7,11 @@ defmodule RiverPlaceClient.HttpClient do
   end
 
   def logout(session_id) do
-    HttpClient.post("/pub-member/logout/", "", [{"Cookie", session_id}])
+    HttpClient.post("/pub-member/logout/", "", ["Cookie": session_id])
   end
 
   def member_annoucement(session_id) do
-    HttpClient.get!("/member-annoucement", [{"Cookie", session_id}])
+    HttpClient.get!("/member-annoucement", ["Cookie": session_id])
   end
 
   def time_slots(year, month, day) do
@@ -22,21 +22,22 @@ defmodule RiverPlaceClient.HttpClient do
     HttpClient.post!(
       "/cms-facility-booking/booking/",
       "time[]=#{year}-#{month}-#{day}&sid[]=#{time_slot_id}",
-      [{"Cookie", session_id}]
+      ["Cookie": session_id]
     )
   end
 
   def delete_booking(booking_id, session_id) do
-    HttpClient.post!("/cms-facility-booking/cancel/#{booking_id}/", "", [{"Cookie", session_id}])
+    HttpClient.post!("/cms-facility-booking/cancel/#{booking_id}/", "", ["Cookie", session_id])
   end
 
   def process_url(url) do
-    "http://www.riverplace.sg" <> url
+    "https://www.riverplace.sg" <> url
   end
 
   def process_request_headers(headers) do
-    Enum.into(headers, [
-      {"Content-Type", "application/x-www-form-urlencoded"}
+    Keyword.merge(headers, [
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Accept": "application/json"
     ])
   end
 

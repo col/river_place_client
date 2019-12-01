@@ -5,7 +5,7 @@ defmodule RiverPlaceClient.Mixfile do
     [
       app: :river_place_client,
       version: "0.1.0",
-      elixir: "~> 1.3",
+      elixir: "~> 1.9",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: "Library for booking tennis courts on riverplace.sg",
@@ -30,7 +30,7 @@ defmodule RiverPlaceClient.Mixfile do
 
   defp deps do
     [
-      {:httpoison, ">= 1.0.0"},
+      {:httpoison, ">= 1.6.2"},
       {:poison, ">= 2.2.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
